@@ -1,0 +1,71 @@
+<div class="main-content">
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="card card-stats" >
+                    <div class="card-header" data-background-color="blue">
+                        <i class="material-icons">plus_one</i>                        
+                    </div>
+                    <div class="card-content">
+                        <p class="category">Add Questions</p>
+                        <h5 class="title">Add questions as per category or exam</h5>
+                        <button [routerLink]="['/questions/add']" class="btn btn-info">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="card card-stats" >
+                        <div class="card-header" data-background-color="purple">
+                            <i class="material-icons">mode_edit</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Edit Questions</p>
+                            <h5 class="title">Edit / Remove previously added questions</h5>
+                            <button class="btn btn-primary">EDIT</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header" data-background-color="red">
+                                <h4 class="title">All Questions</h4>
+                                <p class="category">All questions at a glance</p>
+                            </div>
+                            <div class="card-content table-responsive">
+                                <table class="table">
+                                    <thead class="text-danger">
+                                        <tr>
+                                            <th>Question</th>
+                                            <th>Subject</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>What is the sum of 2 + 2?</td>
+                                            <td>Aptitude</td>
+                                        </tr>
+                                        <tr>
+                                            <td>How many mugs make a jar?</td>
+                                            <td>English</td>
+                                        </tr>
+                                        <tr>
+                                            <td>How will Ram get to the mountains?</td>
+                                            <td>English</td>
+                                        </tr>
+                                        <tr>
+                                            <td>What is the relation between Ram and Seeta as per equation?</td>
+                                            <td>Logical Reasoning</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+        
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>

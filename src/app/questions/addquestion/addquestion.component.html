@@ -1,0 +1,77 @@
+<div class="main-content">
+    <div class="container-fluid">
+    <form [formGroup]="addQuestionForm">    
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="form-group">
+                            <label> Select Category</label>
+                            <select class="form-control"
+                                    formControlName="category"> 
+                                <option *ngFor="let categ of categories"
+                                        [value]="categ">{{categ}}
+                                </option>
+                            </select>
+                        </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="form-group">
+                            <label> Select Question Type</label>
+                            <select class="form-control"
+                                    formControlName="type"> 
+                                <option *ngFor="let qtype of questiontype"
+                                        [value]="qtype">{{qtype}}
+                                </option>
+                            </select>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <textarea class="form-control" formControlName="question_content" placeholder="Type your question here" rows="2"></textarea>            
+            </div>
+        </div>
+        <div class="row">
+        <fieldset formGroupName="answers">
+            <div class="col-lg-6 col-md-6 col-sm-6">    
+                <div class="form-group">
+                    <textarea class="form-control" formControlName="opt_1" placeholder="Option A" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" formControlName="opt_2" placeholder="Option B" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                    <textarea class="form-control" formControlName="opt_3" placeholder="Option C" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" formControlName="opt_4" placeholder="Option D" rows="2"></textarea>
+                </div>
+            </div>
+        </fieldset>
+
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="form-group">
+                            <label> Select Correct Answer</label>
+                            <select class="form-control"
+                                    formControlName="correct_answer"> 
+                                <option *ngFor="let correct of correctanswer"
+                                        [value]="correct">{{correct}}
+                                </option>
+                            </select>
+                    </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <button class="btn btn-success" [disabled]="!addQuestionForm.valid" (click)="submitForm(addQuestionForm.value)" >Save Question</button>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <button [routerLink]="['/questions/add']" class="btn btn-success">Add more questions</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <pre>{{addQuestionForm.value | json}}</pre>
+    </div>
+    </div>
+</div>

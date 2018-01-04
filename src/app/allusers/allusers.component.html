@@ -1,0 +1,37 @@
+<div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header" data-background-color="red">
+                                <h4 class="title">All Users</h4>
+                                <p class="category">List of all Administrators and Applicants</p>
+                            </div>
+                            <div class="card-content table-responsive">
+                                <table class="table">
+                                    <thead class="text-danger">
+                                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Email</th>
+                                            <th>User Type</th>
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let user of userData">
+                                            <td>{{user.first_name}}</td>
+                                            <td>{{user.last_name}}</td>
+                                            <td>{{user.email}}</td>
+                                            <td class="text-danger">{{user.role}}</td>
+                                            <td><a style="padding:10px;" [routerLink]="['/exams']" ><i class="material-icons">mode_edit</i>EDIT</a><button [routerLink]="['/exams']" class="btn btn-primary">SCHEDULE</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+        
+                            </div>
+                        </div>
+                    </div> 
+            </div>
+        </div>
+    </div>

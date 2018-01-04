@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-4">
+                    <div class="card card-stats" >
+                        <div class="card-header" data-background-color="blue">
+                            <i class="material-icons">library_add</i>                        
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Add Subject</p>
+                            <h5 class="title">Add a subject before you add questions</h5>
+                            <button [routerLink]="['/subjects/add']" class="btn btn-info">ADD</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-4">
+                        <div class="card card-stats" >
+                            <div class="card-header" data-background-color="purple">
+                                <i class="material-icons">mode_edit</i>
+                            </div>
+                            <div class="card-content">
+                                <p class="category">All Subjects</p>
+                                <h5 class="title">See all created questions as per subject</h5>
+                                <button [routerLink]="['/subjects/add']" class="btn btn-primary">VIEW</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div>

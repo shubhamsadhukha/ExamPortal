@@ -1,0 +1,68 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group label-floating">
+                        <label class="control-label">Add Subject</label>
+                        <input type="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-success">Add</button>
+                </div>
+                <div class="col-sm-4">
+                    <button [routerLink]="['/questions/add']" class="btn btn-warning">Add Questions</button>
+                </div>
+                <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="card-header" data-background-color="red">
+                                <h4 class="title">All Subjects</h4>
+                            </div>
+                            <div class="card-content table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Subject ID</th>
+                                            <th>Subject Name</th>
+                                            <th>Number of questions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Aptitude</td>
+                                            <td>36</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>English</td>
+                                            <td>78</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Reasoning Ability</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Chemistry</td>
+                                            <td>38</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Physics</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Biology</td>
+                                            <td>61</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
