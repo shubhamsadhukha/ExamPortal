@@ -8,6 +8,7 @@ const app = express();
 const cors = require('cors');
 const router = require('./server/routes/api')
 const uri = 'mongodb://localhost:27017/examportalDB';
+const host = '0.0.0.0';
 
 // API file for interacting with MongoDB
 // const api = require('./server/routes/api');
@@ -42,4 +43,4 @@ app.set('port', port);
 
 const server = http.createServer(app);
 
-server.listen(port, () => console.log(`Exam Portal running on localhost:${port}`));
+server.listen(port, host, () => console.log(`Exam Portal running on localhost:${port}`));
